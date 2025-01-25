@@ -9,6 +9,6 @@ The Collatz conjecture is one of the most famous unsolved problems in mathematic
 
 ## We use the binary numbering system
 
-The proof relies on the **little-endian binary numbering system**, as suggested by the sequence of dividing by 2, which corresponds to a right shift in binary. In this system, the least significant bit (bit 0, representing 2<sup>0</sup> ** is on the far right and if set, the number is odd, followed by bit 1 ** (2^1) **, bit 2 ** 2^2 **, and so on.
+The proof relies on the **little-endian binary numbering system**, as suggested by the sequence of dividing by 2, which corresponds to a right shift in binary. In this system, the least significant bit (bit 0, representing 2<sup>0</sup> is on the far right and if set, the number is odd, followed by bit 1 2<sup>1</sup>, bit 2 2<sup>2</sup>, and so on.
 
 ## Note: Over the next week, I'll be publishing the proof here.
