@@ -1,3 +1,22 @@
+def display_base3(num):
+  """Displays an integer as a base-3 string.
+
+  Args:
+    num: The integer to convert to base-3.
+  """
+
+  if num == 0:
+    print("0")
+    return
+
+  base3_str = ""
+  while num > 0:
+    remainder = num % 3
+    base3_str = str(remainder) + base3_str
+    num //= 3
+
+  return base3_str
+
 def count_ones(n):
     """
     Counts the number of 1 bits in the binary representation of an integer.
@@ -47,8 +66,9 @@ def collatz(acc_start, p_pstart, flag):
         ctr_cnt += 1
         ctr_array [ 0xf & accumulator ] += 1
 
+        b3 = display_base3(accumulator)
         loop_count += 1
-        print(f"{loop_count:04d}", format(accumulator, '064b'), format(accumulator,'04d'), count_ones(accumulator))
+        print(f"{loop_count:04d}", format(accumulator, '064b'), format(accumulator,'04d'), count_ones(accumulator), b3)
 
         if count_ones(accumulator) == 1:
             break
