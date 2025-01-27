@@ -57,9 +57,11 @@ def collatz(acc_start, p_pstart, flag):
 
     print(f"{loop_count:04d}", format(accumulator, '064b'), format(accumulator,'04d'), count_ones(accumulator))
     while True:
-        if (not flag) and (not (accumulator & (1 << p_pstart))):
+        if (not (accumulator & (1 << p_pstart))): # p_pstart = 0 typically
+            # odd rule - part A - divide by 2
             accumulator >>= 1
         else:
+            # even rule - part B - multiply by 3 then add 1
             accumulator = 3 * accumulator + (1 << p_pstart)
 
         # keep track of occurences of low 4 bits
@@ -71,6 +73,7 @@ def collatz(acc_start, p_pstart, flag):
         loop_count += 1
         print(f"{loop_count:04d}", format(accumulator, '064b'), format(accumulator,'04d'), count_ones(accumulator), b3)
 
+        # Terminating condition ???
         if count_ones(accumulator) == 1:
             break
 
