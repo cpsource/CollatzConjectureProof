@@ -97,7 +97,7 @@ number, that, because we've tested it, must also converge to 1.
 
 ## Back to our upper bound for the accumulator.
 
-We had 3/2, but now I can also say tht 62% of the time, I will be dividing by
+We had 3/2, but now I can also say that 62% of the time, I will be dividing by
 2. Our rule now becomes
 
 ```
