@@ -1,4 +1,5 @@
-# CollatzConjectureProof
+CollatzConjectureProof
+
 We prove the Collatz Conjecture
 
 ## What is the Collatz Conjecture?
@@ -133,8 +134,9 @@ accumulator will begin to decrease again, eventually reaching 1.
 
 Further, 10^20 N's have been tested and converge to 1. This certainly
 tests every state transition in every track, without seeing an infinite loop
-remaining withn the 38%. We could show this as well with 16*16 states, or 256
-as nothing new (unproven) beyond that will ever appear in the state transisitons.
+remaining withn the 38%.
 
-
+You can run ./loop256.sh to loop through all possible combinations of track-number for all necessary N
+to show that they all converge to 1 and that all permutations of bits 2<sup>7</sup> through 2<sup>0</sup>
+have a convergent property greater than 60%.
 

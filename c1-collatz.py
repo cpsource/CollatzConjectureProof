@@ -69,9 +69,9 @@ def collatz(acc_start, p_pstart, flag):
         ctr_array [ 0xf & accumulator ] += 1
 
         #b3 = display_base3(accumulator)
-        b3 = ''
+        b3 = accumulator & 0xf
         loop_count += 1
-        print(f"{loop_count:04d}", format(accumulator, '064b'), format(accumulator,'04d'), count_ones(accumulator), b3)
+        print(f"{loop_count:04d}", format(accumulator, '064b'), format(accumulator,'10d'), format(count_ones(accumulator),'3d'), format(b3,'02d'))
 
         # Terminating condition ???
         if count_ones(accumulator) == 1:
@@ -96,7 +96,7 @@ def collatz(acc_start, p_pstart, flag):
     # Format the number as a percentage with one decimal place
     formatted_percentage = "{:.1%}".format(sum_of_elements)
     # Print the formatted percentage
-    print("Percentage of time we'll draw a zero",formatted_percentage, f"\n")
+    print("Percentage of time we'll draw bit 0 as zero",formatted_percentage, f"\n")
     
 def main():
     """
@@ -111,7 +111,8 @@ def main():
     p_pstart = int(sys.argv[2])  # Currently unused
     flag = bool(int(sys.argv[3]))  # Convert string to boolean
 
-    collatz(acc_start, p_pstart, flag)
+    if count_ones(acc_start) > 1:
+      collatz(acc_start, p_pstart, flag)
 
 if __name__ == "__main__":
     main()
