@@ -50,7 +50,7 @@ def collatz(acc_start, p_pstart, flag):
     ctr_array = [0] * 16
 
     # keep track of occurences of low 4 bits
-    print(f"{'cnt':>4s} {'binary accumulator (acc)':>64s} {'acc':>4s} {'bits':>4s}")
+    print(f"\n{'cnt':>4s} {'binary accumulator (acc)':>64s} {'acc':>4s} {'bits':>4s}")
     print("-" * (4 + 64 + 4 + 4 + 3))  # 3 spaces for the gaps between columns
     #ctr_cnt += 1
     #ctr_array [ 0xf & accumulator ] += 1
@@ -66,32 +66,34 @@ def collatz(acc_start, p_pstart, flag):
         ctr_cnt += 1
         ctr_array [ 0xf & accumulator ] += 1
 
-        b3 = display_base3(accumulator)
+        #b3 = display_base3(accumulator)
+        b3 = ''
         loop_count += 1
         print(f"{loop_count:04d}", format(accumulator, '064b'), format(accumulator,'04d'), count_ones(accumulator), b3)
 
         if count_ones(accumulator) == 1:
             break
 
+    print (f"\n")
+    
     # display ctr_array
-    print(f"ctr_cnt = {ctr_cnt}")
-    print(ctr_array)
+    #print(f"ctr_cnt = {ctr_cnt}")
+    #print(ctr_array)
     # create probability array
     float_array = [element / ctr_cnt for element in ctr_array]
 
     # Format the output as a list with four decimal places for each element
-    formatted_output = "[" + ", ".join(f"{prob:.4f}" for prob in float_array) + "]"
-
+    formatted_output = "[" + ", ".join(f"{prob:.4f}" for prob in float_array) + f"]\n"
     # Print the formatted output
-    print(formatted_output)
+    print("Probability array",formatted_output)
 
     # Calculate the sum of elements at indices 0, 2, 4, ... E (14)
     sum_of_elements = sum(float_array[i] for i in range(0, len(float_array), 2))
-    print(sum_of_elements)
+    #print(sum_of_elements)
     # Format the number as a percentage with one decimal place
     formatted_percentage = "{:.1%}".format(sum_of_elements)
     # Print the formatted percentage
-    print(formatted_percentage)
+    print("Percentage of time we'll draw a zero",formatted_percentage, f"\n")
     
 def main():
     """
