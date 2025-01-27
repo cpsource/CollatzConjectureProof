@@ -83,6 +83,7 @@ You only need to run the experiment over all track-numbers and not N-upper.
 You learn two things:
 * That for every track-number, we converge to 1
 * That track-number is even more than about 62% of the time
+* That we never get the same state twice on any given track
 
 ## Why don't I have to verify this for all N-upper.
 
@@ -107,10 +108,33 @@ We had 3/2, but now I can also say tht 62% of the time, I will be dividing by
 
 Therefore, any N must converge to 1 over time. Therefore, we've proven the conjecture.
 
+## c1-collatz.py
 
+Included with this proof is the c1-collatz.py python program. It displays each iteration until
+termination.
 
+To run it:
 
+```
+  python3 c1-collatz.py N 0 0
 
+```
+
+You might try number 5649499 as it iterates 608 times before conclusion.
+
+## We rely on house odds to converge, but iterations don't always.
+
+As you watch the printout, notice that we get runs where our accumulator
+increases. We would expect this, as 38% of the time, the accumulator will
+increase by 1.5 times.
+
+These runs don't last as the house always has the odds, and the
+accumulator will begin to decrease again, eventually reaching 1.
+
+Further, 10^20 N's have been tested and converge to 1. This certainly
+tests every state transition in every track, without seeing an infinite loop
+remaining withn the 38%. We could show this as well with 16*16 states, or 256
+as nothing new (unproven) beyond that will ever appear in the state transisitons.
 
 
 
