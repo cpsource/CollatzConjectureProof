@@ -1,3 +1,49 @@
+def count_p_pattern(pattern, binary_string):
+    """
+    Counts the number of '010' patterns in a binary string.
+    
+    Parameters:
+        binary_string (str): The input binary string.
+    
+    Returns:
+        int: The number of '010' patterns found in the binary string.
+    """
+    count = 0
+    #pattern = "010"
+    
+    # Loop through the string to check for the pattern
+    for i in range(len(binary_string) - len(pattern) + 1):
+        if binary_string[i:i+len(pattern)] == pattern:
+            count += 1
+    
+    return count
+
+def get_ones_pattern(binary_string):
+  p = [0] * 8
+  p[0] = count_p_pattern('010',binary_string)
+  p[1] = count_p_pattern('0110',binary_string)
+  p[2] = count_p_pattern('01110',binary_string)
+  p[3] = count_p_pattern('011110',binary_string)
+  p[4] = count_p_pattern('0111110',binary_string)
+  p[5] = count_p_pattern('01111110',binary_string)
+  p[6] = count_p_pattern('011111110',binary_string)
+  p[7] = count_p_pattern('0111111110',binary_string)
+
+  return p
+
+def get_zeroes_pattern(binary_string):
+  p = [0] * 8
+  p[0] = count_p_pattern('101',binary_string)
+  p[1] = count_p_pattern('1001',binary_string)
+  p[2] = count_p_pattern('10001',binary_string)
+  p[3] = count_p_pattern('100001',binary_string)
+  p[4] = count_p_pattern('1000001',binary_string)
+  p[5] = count_p_pattern('10000001',binary_string)
+  p[6] = count_p_pattern('100000001',binary_string)
+  p[7] = count_p_pattern('1000000001',binary_string)
+
+  return p
+  
 def display_base3(num):
   """Displays an integer as a base-3 string.
 
@@ -68,10 +114,14 @@ def collatz(acc_start, p_pstart, flag):
         ctr_cnt += 1
         ctr_array [ 0xf & accumulator ] += 1
 
+        a = format(accumulator,'064b')
+        p0 = get_ones_pattern(a)
+        p1 = get_zeroes_pattern(a)
+        
         #b3 = display_base3(accumulator)
         b3 = accumulator & 0xf
         loop_count += 1
-        print(f"{loop_count:04d}", format(accumulator, '064b'), format(accumulator,'10d'), format(count_ones(accumulator),'3d'), format(b3,'02d'))
+        print(f"{loop_count:04d}", format(accumulator, '064b'), format(accumulator,'10d'), format(count_ones(accumulator),'3d'), format(b3,'02d'), p0, p1)
 
         # Terminating condition ???
         if count_ones(accumulator) == 1:
