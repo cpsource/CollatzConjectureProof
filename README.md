@@ -18,6 +18,27 @@ It didn't think much of the proof I presented. As for a LLM, at a certain point,
 Next, I pushed this LLM into the unknown and came up with what it thinks is a proof of the conjecture. For any N, it shows that
 the bit sequences must converge to ....010101.... and therefore eventually reduce to one. The discussion with ChatGpt 4o can be found [here]().
 
+The Chatgpt dialog is here and can be read in order.
+
+[chatgpt-n-upper.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-n-upper.md)
+[chatgpt-n-upper-shift-proof.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-n-upper-shift-proof.md)
+[chatgpt-n-62pct.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-n-62pct.md)
+[chatgpt-no-new-states.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-no-new-states.md)
+[chatgpt-generalize-to-all-N.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-generalize-to-all-N.md)
+[chatgpt-proof.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-proof.md)
+[chatgpt-more-on-proof.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-more-on-proof.md)
+[chatgpt-strong-argument.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-strong-argument.md)
+[chatgpt-flip-coin.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-flip-coin.md)
+[chatgpt-no-same-state.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-no-same-state.md)
+[chatgpt-derive-62.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-derive-62.md)
+[chatgpt-why-5649499.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-why-5649499.md)
+[chatgpt-chopping.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-chopping.md)
+[chatgpt-repeating-01.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-repeating-01.md)
+[chatgpt-repeating-01-part2.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-repeating-01-part2.md)
+[chatgpt-repeating-01-part3.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-repeating-01-part3.md)
+[chatgpt-final-proof.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-final-proof.md)
+[chatgpt-final-proofi-paper-1.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-final-proofi-paper-1.md)
+
 ## We use the binary numbering system
 
 The proof relies on the **little-endian binary numbering system**, as suggested by the sequence of dividing by 2, which corresponds to a right shift in binary. In this system, the least significant bit (bit 0, representing 2<sup>0</sup> is on the far right and if set, the number is odd, followed by bit 1 2<sup>1</sup>, bit 2 2<sup>2</sup>, and so on.
