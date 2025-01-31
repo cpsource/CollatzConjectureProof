@@ -18,7 +18,7 @@ It didn't think much of the proof I presented. As for a LLM, at a certain point,
 Next, I pushed this LLM into the unknown and came up with what it thinks is a proof of the conjecture. For any N, it shows that
 the bit sequences must converge to ....010101.... and therefore eventually reduce to one. The discussion with ChatGpt 4o can be found [here]().
 
-The Chatgpt dialog is here and can be read in order.
+The Chatgpt dialog is here and can be read in order. Hint: start with chatgpt-repeating-01.md to see the start of the proof.
 
 [chatgpt-n-upper.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-n-upper.md)
 [chatgpt-n-upper-shift-proof.md](https://github.com/cpsource/CollatzConjectureProof/blob/main/chatgpt-n-upper-shift-proof.md)
