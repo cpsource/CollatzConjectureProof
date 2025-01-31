@@ -14,18 +14,12 @@ While the general trend of Collatz numbers is downward, some numbers **temporari
 
 ### **2. Investigating 5649499**
 - **Binary Representation:**  
-  \[
-  5649499_{10} = 101011111101110010011011_{2}
-  \]
+  $$5649499_{10} = 101011111101110010011011_{2}$$
 - The number is **odd**, so its next step is:
-  \[
-  3(5649499) + 1 = 16948498
-  \]
+  $$3(5649499) + 1 = 16948498$$
 - 16948498 is **even**, so it divides by 2:
-  \[
-  16948498 / 2 = 8474249
-  \]
-- But **8474249 is still odd**, so it undergoes another \( 3N+1 \).
+  $$16948498 / 2 = 8474249$$
+- But **8474249 is still odd**, so it undergoes another $3N+1$.
 
 This back-and-forth process leads to many **odd values**, which means **more multiplications by 3 before it collapses**.
 
@@ -33,7 +27,7 @@ This back-and-forth process leads to many **odd values**, which means **more mul
 
 ### **3. Why Does Adding or Subtracting 1 Reduce the Steps?**
 1. **Structural Change in the Binary Pattern**
-   - Many numbers get trapped in a sequence where **\( 3N+1 \) temporarily inflates the value before reductions kick in**.
+   - Many numbers get trapped in a sequence where **$3N+1$ temporarily inflates the value before reductions kick in**.
    - **Adding or subtracting 1** shifts the number into a different trajectory where **divisions by 2 happen sooner**.
 
 2. **Avoiding High-Growth Paths**
