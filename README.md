@@ -8,6 +8,16 @@ From [wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture):
 
 The Collatz conjecture is one of the most famous unsolved problems in mathematics. The conjecture asks whether repeating two simple arithmetic operations will eventually transform every positive integer into 1. It concerns sequences of integers in which each term is obtained from the previous term as follows: if a term is even, the next term is one half of it. If a term is odd, the next term is 3 times the previous term plus 1. The conjecture is that these sequences always reach 1, no matter which positive integer is chosen to start the sequence. The conjecture has been shown to hold for all positive integers up to 2.95×1020, but no general proof has been found. (Until now !)
 
+## Note: deepseek dialog
+
+I tried out the LLM deepseek to see how well it worked on a difficult and unknown problem. The results can be read [here](https://github.com/cpsource/CollatzConjectureProof/blob/main/collatz-deepseek-flow.md)
+It didn't think much of the proof I presented. As for a LLM, at a certain point, it starting hanging and couldn't answer my quesions. I got the feeling it couldn't go where no one had gone before. The model was fine with the known, but as soon as I pushed it, it was out of its league.
+
+## Note: switching to Chatgpt 4o
+
+Next, I pushed this LLM into the unknown and came up with what it thinks is a proof of the conjecture. For any N, it shows that
+the bit sequences must converge to ....010101.... and therefore eventually reduce to one. The discussion with ChatGpt 4o can be found [here]().
+
 ## We use the binary numbering system
 
 The proof relies on the **little-endian binary numbering system**, as suggested by the sequence of dividing by 2, which corresponds to a right shift in binary. In this system, the least significant bit (bit 0, representing 2<sup>0</sup> is on the far right and if set, the number is odd, followed by bit 1 2<sup>1</sup>, bit 2 2<sup>2</sup>, and so on.
